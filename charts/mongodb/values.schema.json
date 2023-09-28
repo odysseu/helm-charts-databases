@@ -13,7 +13,11 @@
             "tag": {
               "description": "mongodb major version",
               "type": "string",
-              "enum": ["4.0", "4.2", "4.4"],
+              "enum": [
+                "4.0",
+                "4.2",
+                "4.4"
+              ],
               "default": "4.4"
             }
           }
@@ -26,9 +30,6 @@
               "description": "root password",
               "type": "string",
               "default": "changeme",
-              "x-form": {
-                "value": "{{project.password}}"
-              },
               "x-onyxia": {
                 "overwriteDefaultWith": "{{project.password}}"
               }
@@ -42,9 +43,6 @@
               "description": "user name of the default database",
               "type": "string",
               "default": "user",
-              "x-form": {
-                "value": "{{project.id}}"
-              },
               "x-onyxia": {
                 "overwriteDefaultWith": "{{project.id}}"
               }
@@ -53,9 +51,6 @@
               "description": "password of the user",
               "type": "string",
               "default": "changeme",
-              "x-form": {
-                "value": "{{project.password}}"
-              },
               "x-onyxia": {
                 "overwriteDefaultWith": "{{project.password}}"
               }
@@ -178,9 +173,6 @@
               "title": "Enable network policy",
               "description": "Only pod from the same namespace will be allowed",
               "default": true,
-              "x-form": {
-                "value": "{{region.defaultNetworkPolicy}}"
-              },
               "x-onyxia": {
                 "overwriteDefaultWith": "region.defaultNetworkPolicy"
               }

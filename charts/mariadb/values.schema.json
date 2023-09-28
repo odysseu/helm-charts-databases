@@ -17,9 +17,6 @@
               "form": true,
               "description": "Defaults to a random 10-character alphanumeric string if not set",
               "default": "changeme",
-              "x-form": {
-                "value": "{{project.password}}"
-              },
               "x-onyxia": {
                 "overwriteDefaultWith": "{{project.password}}"
               }
@@ -35,9 +32,6 @@
               "title": "MariaDB custom user",
               "description": "Name of the custom user to be created during the 1st initialization of MariaDB. This user only has permissions on the MariaDB custom database",
               "default": "admin",
-              "x-form": {
-                "value": "{{project.id}}"
-              },
               "x-onyxia": {
                 "overwriteDefaultWith": "{{project.id}}"
               }
@@ -47,9 +41,6 @@
               "title": "Password for MariaDB custom user",
               "description": "Defaults to a random 10-character alphanumeric string if not set",
               "default": "changeme",
-              "x-form": {
-                "value": "{{project.password}}"
-              },
               "x-onyxia": {
                 "overwriteDefaultWith": "{{project.password}}"
               }

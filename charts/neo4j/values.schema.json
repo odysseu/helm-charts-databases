@@ -84,9 +84,6 @@
           "type": "string",
           "description": "Password",
           "default": "changeme",
-          "x-form": {
-            "value": "{{project.password}}"
-          },
           "x-onyxia": {
             "overwriteDefaultWith": "{{project.password}}"
           }
@@ -100,9 +97,6 @@
               "title": "Enable IP protection",
               "description": "Only the configured set of IPs will be able to reach the service",
               "default": true,
-              "x-form": {
-                "value": "{{region.defaultIpProtection}}"
-              },
               "x-onyxia": {
                 "overwriteDefaultWith": "region.defaultIpProtection"
               }
@@ -112,9 +106,6 @@
               "description": "the white list of IP is whitespace",
               "title": "Whitelist of IP",
               "default": "0.0.0.0",
-              "x-form": {
-                "value": "{{user.ip}}"
-              },
               "x-onyxia": {
                 "overwriteDefaultWith": "{{user.ip}}"
               },
@@ -134,9 +125,6 @@
               "title": "Enable network policy",
               "description": "Only pod from the same namespace will be allowed",
               "default": true,
-              "x-form": {
-                "value": "{{region.defaultNetworkPolicy}}"
-              },
               "x-onyxia": {
                 "overwriteDefaultWith": "region.defaultNetworkPolicy"
               }
@@ -145,10 +133,6 @@
               "type": "array",
               "description": "Array of source allowed to have network access to your service",
               "default": [],
-              "x-form": {
-                "hidden": true,
-                "value": "{{region.from}}"
-              },
               "x-onyxia": {
                 "hidden": true,
                 "overwriteDefaultWith": "region.from"
@@ -203,10 +187,6 @@
           "type": "string",
           "form": true,
           "title": "Hostname",
-          "x-form": {
-            "hidden": true,
-            "value": "{{project.id}}-{{k8s.randomSubdomain}}-0.{{k8s.domain}}"
-          },
           "x-onyxia": {
             "hidden": true,
             "overwriteDefaultWith": "{{project.id}}-{{k8s.randomSubdomain}}-0.{{k8s.domain}}"
@@ -216,10 +196,6 @@
           "type": "string",
           "form": true,
           "title": "Hostname",
-          "x-form": {
-            "hidden": true,
-            "value": "{{project.id}}-{{k8s.randomSubdomain}}-bolt.{{k8s.domain}}"
-          },
           "x-onyxia": {
             "hidden": true,
             "overwriteDefaultWith": "{{project.id}}-{{k8s.randomSubdomain}}-bolt.{{k8s.domain}}"
@@ -230,10 +206,6 @@
           "form": true,
           "title": "ingressClassName",
           "default": "",
-          "x-form": {
-            "hidden": true,
-            "value": "{{k8s.ingressClassName}}"
-          },
           "x-onyxia": {
             "hidden": true,
             "overwriteDefaultWith": "{{k8s.ingressClassName}}"
@@ -288,7 +260,11 @@
         "version": {
           "description": "neo4j version",
           "type": "string",
-          "enum": ["4.4.4", "4.4.3", "4.4.2"],
+          "enum": [
+            "4.4.4",
+            "4.4.3",
+            "4.4.2"
+          ],
           "default": "4.4.4"
         }
       }
